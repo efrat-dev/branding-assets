@@ -1,0 +1,353 @@
+<svg width="900" height="400" viewBox="0 0 900 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradients -->
+    <radialGradient id="mainBgGradient" cx="30%" cy="40%" r="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- AI Icon gradients -->
+    <radialGradient id="iconBgGradient" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="iconCodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="iconNeuronGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4facfe;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <linearGradient id="iconDataGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#4facfe;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Text gradients -->
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="taglineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effects -->
+    <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="iconNeuronGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Icon particle effect -->
+    <pattern id="iconParticles" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.3" fill="#4facfe" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="6" cy="6" r="0.2" fill="#00f2fe" opacity="0.3">
+        <animate attributeName="opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </pattern>
+  </defs>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1.2s ease forwards;
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1.2s ease forwards;
+    }
+    
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: scaleIn 1s ease forwards;
+    }
+    
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .pulse-subtle {
+      animation: pulseSubtle 4s infinite;
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+    .delay-4 { animation-delay: 1.2s; }
+    .delay-5 { animation-delay: 1.5s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideInLeft {
+      to { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      to { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      to { 
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    
+    @keyframes pulseSubtle {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    .main-name {
+      font-size: 54px;
+      font-weight: 700;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    
+    .description {
+      font-size: 18px;
+      font-weight: 400;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 0.3px;
+    }
+  </style>
+
+  <!-- Professional background -->
+  <rect width="900" height="400" fill="url(#mainBgGradient)" />
+  
+  <!-- Subtle animated background elements -->
+  <g opacity="0.2">
+    <circle cx="150" cy="80" r="2" fill="#4facfe" class="pulse-subtle delay-1" />
+    <circle cx="750" cy="120" r="1.5" fill="#00f2fe" class="pulse-subtle delay-3" />
+    <circle cx="120" cy="320" r="1.5" fill="#f093fb" class="pulse-subtle delay-2" />
+    <circle cx="800" cy="300" r="2" fill="#8b5cf6" class="pulse-subtle delay-4" />
+    <circle cx="50" cy="200" r="1" fill="#06b6d4" class="pulse-subtle delay-5" />
+  </g>
+  
+  <!-- AI Icon -->
+  <g transform="translate(100, 120)" class="scale-in delay-1">
+    <g class="float">
+      <!-- Icon background -->
+      <circle cx="32" cy="32" r="32" fill="url(#iconBgGradient)"/>
+      <circle cx="32" cy="32" r="30" fill="url(#iconParticles)" opacity="0.3"/>
+      
+      <!-- Outer ring -->
+      <circle cx="32" cy="32" r="28" fill="none" stroke="url(#iconCodeGradient)" stroke-width="1" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 32 32;360 32 32" dur="20s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Code brackets -->
+      <path d="M14 18 L8 26 L14 34" stroke="url(#iconCodeGradient)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+        <animate attributeName="stroke-width" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M50 18 L56 26 L50 34" stroke="url(#iconCodeGradient)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+        <animate attributeName="stroke-width" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+      </path>
+      
+      <!-- Neural network -->
+      <!-- Input layer -->
+      <circle cx="18" cy="14" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="26" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="38" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Hidden layer -->
+      <circle cx="32" cy="12" r="3.6" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3.6;4.6;3.6" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="32" cy="22" r="3.6" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3.6;4.6;3.6" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="32" cy="32" r="3.6" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3.6;4.6;3.6" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="32" cy="42" r="3.6" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3.6;4.6;3.6" dur="2.5s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Output layer -->
+      <circle cx="46" cy="16" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="46" cy="26" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="46" cy="36" r="3" fill="url(#iconNeuronGradient)" filter="url(#iconNeuronGlow)">
+        <animate attributeName="r" values="3;4;3" dur="3s" begin="2.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Neural connections -->
+      <g stroke="url(#iconCodeGradient)" stroke-width="2" opacity="0.7">
+        <line x1="18" y1="14" x2="32" y2="12">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="18" y1="14" x2="32" y2="22">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="18" y1="26" x2="32" y2="22">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+        </line>
+        <line x1="18" y1="26" x2="32" y2="32">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+        </line>
+        <line x1="18" y1="38" x2="32" y2="42">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+        </line>
+        
+        <line x1="32" y1="12" x2="46" y2="16">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+        </line>
+        <line x1="32" y1="22" x2="46" y2="16">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+        </line>
+        <line x1="32" y1="22" x2="46" y2="26">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+        </line>
+        <line x1="32" y1="32" x2="46" y2="26">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+        </line>
+        <line x1="32" y1="42" x2="46" y2="36">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+        </line>
+      </g>
+      
+      <!-- Data visualization -->
+      <g transform="translate(20, 48)">
+        <rect x="0" y="8" width="4" height="8" fill="url(#iconDataGradient)" rx="2">
+          <animate attributeName="height" values="8;14;8" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="8;2;8" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="6" y="4" width="4" height="12" fill="url(#iconDataGradient)" rx="2">
+          <animate attributeName="height" values="12;16;12" dur="2.5s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="4;0;4" dur="2.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="12" y="6" width="4" height="10" fill="url(#iconDataGradient)" rx="2">
+          <animate attributeName="height" values="10;12;10" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="6;4;6" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="18" y="2" width="4" height="14" fill="url(#iconDataGradient)" rx="2">
+          <animate attributeName="height" values="14;16;14" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="2;0;2" dur="2.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <!-- Main content -->
+  <g transform="translate(250, 140)">
+    <!-- Main name -->
+    <text x="0" y="0" class="main-name slide-in-left delay-2" fill="url(#nameGradient)" filter="url(#textGlow)">
+      Efrat Bdil
+    </text>
+    
+    <!-- Professional divider line -->
+    <g class="fade-in delay-3">
+      <line x1="0" y1="20" x2="450" y2="20" stroke="url(#accentGradient)" stroke-width="3" opacity="0.8" />
+    </g>
+
+    <!-- Subtitle -->
+    <text x="0" y="60" class="subtitle slide-in-left delay-4" fill="url(#accentGradient)" filter="url(#subtleGlow)">
+      Full Stack &amp; AI Developer
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="90" class="tagline slide-in-right delay-5" fill="url(#taglineGradient)" opacity="0.9">
+      { Code with Intelligence }
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="130" class="description fade-in delay-5" fill="#cbd5e1" opacity="0.9">
+      Founder of "Creating AI" – Data Science Learning Platform
+    </text>
+  </g>
+
+</svg>
