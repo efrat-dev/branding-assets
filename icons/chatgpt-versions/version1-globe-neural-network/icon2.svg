@@ -1,11 +1,9 @@
 <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
   <g stroke="#004d40" stroke-width="3.5" fill="#1de9b6">
-    <!-- קשרים מודגשים ופשוטים -->
     <line x1="15" y1="30" x2="45" y2="15"/>
     <line x1="15" y1="30" x2="45" y2="30"/>
     <line x1="15" y1="30" x2="45" y2="45"/>
 
-    <!-- נוירונים עבים ומודגשים -->
     <circle cx="15" cy="30" r="5.5"/>
     <circle cx="45" cy="15" r="6"/>
     <circle cx="45" cy="30" r="6"/>
