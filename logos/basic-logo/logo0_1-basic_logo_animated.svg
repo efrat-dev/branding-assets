@@ -1,0 +1,49 @@
+<svg width="600" height="160" viewBox="0 0 600 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.4s; }
+    .fade-in.delay-2 { animation-delay: 0.8s; }
+    .fade-in.delay-3 { animation-delay: 1.2s; }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      fill: #333;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      fill: #444;
+    }
+
+    .desc {
+      font-size: 14px;
+      fill: #555;
+    }
+
+    text {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+
+  <rect width="600" height="160" fill="white" />
+
+  <text x="30" y="50" class="fade-in delay-1 name">Efrat Bdil – Code with Intelligence</text>
+<text x="30" y="80" class="fade-in delay-2 subtitle">Full Stack &amp; AI Developer</text>
+  <text x="30" y="105" class="fade-in delay-3 desc">Founder of "Creating AI" – Data Science Learning Platform</text>
+</svg>
