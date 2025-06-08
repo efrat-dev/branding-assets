@@ -124,11 +124,11 @@
     }
     
     .pulse {
-      animation: pulse 2.5s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite;
     }
     
     .pulse-fast {
-      animation: pulse 1.5s ease-in-out infinite;
+      animation: pulse 1s ease-in-out infinite;
     }
     
     .float {
@@ -140,19 +140,19 @@
     }
     
     .rotate {
-      animation: rotate 12s linear infinite;
+      animation: rotate 8s linear infinite;
     }
     
     .rotate-reverse {
-      animation: rotateReverse 15s linear infinite;
+      animation: rotateReverse 10s linear infinite;
     }
     
     .scale-pulse {
-      animation: scalePulse 4s ease-in-out infinite;
+      animation: scalePulse 3s ease-in-out infinite;
     }
     
     .shimmer {
-      animation: shimmer 3s linear infinite;
+      animation: shimmer 2s linear infinite;
     }
     
     .typing {
@@ -194,18 +194,18 @@
     }
     
     @keyframes pulse {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.8; }
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
     }
     
     @keyframes float {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-8px) rotate(2deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
     }
     
     @keyframes floatReverse {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(6px) rotate(-1.5deg); }
+      50% { transform: translateY(8px) rotate(-2deg); }
     }
     
     @keyframes rotate {
@@ -220,13 +220,13 @@
     
     @keyframes scalePulse {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.1); }
     }
     
     @keyframes shimmer {
-      0% { opacity: 0.4; }
-      50% { opacity: 0.7; }
-      100% { opacity: 0.4; }
+      0% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.3; }
     }
     
     @keyframes typing {
@@ -236,47 +236,47 @@
 
     .main-name {
       font-size: 42px;
-      font-weight: 700;
+      font-weight: 800;
       font-family: 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     .subtitle {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
       font-family: 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
 
     .description {
       font-size: 16px;
       font-weight: 400;
       font-family: 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
     }
     
     .link-text {
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
       font-family: 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
     }
     
     .code-text {
       font-size: 18px;
       font-weight: 500;
       font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
     }
 
     .link-hover:hover {
-      opacity: 0.85;
-      transform: translateY(-1px) scale(1.02);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0.8;
+      transform: translateY(-2px) scale(1.05);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     
-    .subtle-glow {
-      filter: drop-shadow(0 0 6px currentColor);
+    .glow-effect {
+      filter: drop-shadow(0 0 10px currentColor);
     }
   </style>
 
@@ -308,6 +308,7 @@
     <circle cx="50" cy="180" r="1" fill="#475569" class="pulse delay-4" opacity="0.3" />
     <circle cx="400" cy="280" r="1.5" fill="#3b82f6" class="pulse delay-5" opacity="0.4" />
   </g>
+  
   
   <!-- Professional AI + Full Stack Icon -->
   <g class="fade-in delay-1" transform="translate(20, 30) scale(1.8)" filter="url(#iconGlow)">
@@ -351,7 +352,8 @@
       </g>
     </g>
     
-    <!-- Left: Professional Data Science Visualization -->
+    
+      <!-- Left: Professional Data Science Visualization -->
     <g transform="translate(0, 30)">
       <!-- Professional Data Visualization -->
       <g class="float delay-1">
@@ -376,6 +378,7 @@
           <path d="M 5 5 L 15 8 L 8 15 L 15 15" stroke="#ffffff" stroke-width="0.8" opacity="0.5" fill="none"/>
         </g>
         
+        
         <!-- Professional Machine Learning Visualization -->
         <g transform="translate(10, 80)">
           <!-- Professional neural network layers -->
@@ -392,7 +395,7 @@
             
             <!-- Output layer -->
             <circle cx="30" cy="8" r="2.5" fill="#60a5fa" opacity="0.8"/>
-            
+             
             <!-- Professional connections -->
             <g stroke="#e2e8f0" stroke-width="0.8" opacity="0.5" fill="none">
               <path d="M 2 0 L 13 2"/>
@@ -411,22 +414,9 @@
           </g>
         </g>
       </g>
-      
-      <!-- Professional Analytics Waves -->
-      <g transform="translate(0, 130)">
-        <g class="shimmer delay-4">
-          <path d="M 5 0 Q 15 -6 25 0 Q 35 6 45 0 Q 55 -6 65 0" 
-                stroke="url(#iconGradient)" stroke-width="2.5" fill="none" opacity="0.7" class="float delay-1"/>
-          <path d="M 5 10 Q 15 4 25 10 Q 35 16 45 10 Q 55 4 65 10" 
-                stroke="url(#techGradient)" stroke-width="2" fill="none" opacity="0.6" class="float delay-2"/>
-          <path d="M 5 20 Q 15 14 25 20 Q 35 26 45 20 Q 55 14 65 20" 
-                stroke="#64748b" stroke-width="1.5" fill="none" opacity="0.5" class="float delay-3"/>
-        </g>
-      </g>
-      
     </g>
     
-    <!-- Right: Professional Full Stack Development -->
+        <!-- Right: Professional Full Stack Development -->
     <g transform="translate(95, 30)">
       <!-- Professional App Architecture -->
       <g class="slide-in-up delay-1">
@@ -484,30 +474,203 @@
           </circle>
         </g>
       </g>
-      
-      <!-- Professional Development Environment -->
-      <g transform="translate(-5, 130)">
-        <!-- Professional Terminal -->
-        <rect x="0" y="0" width="45" height="25" rx="3" fill="#0f172a" opacity="0.95" stroke="#3b82f6" stroke-width="0.8"/>
         
-        <!-- Professional terminal header -->
-        <circle cx="4" cy="4" r="1.2" fill="#ef4444" opacity="0.8"/>
-        <circle cx="8" cy="4" r="1.2" fill="#f59e0b" opacity="0.8"/>
-        <circle cx="12" cy="4" r="1.2" fill="#10b981" opacity="0.8"/>
+      <!-- Cloud Deployment Visualization -->
+      <g transform="translate(10, 170)" class="float delay-2">
+        <!-- Premium cloud shape -->
+        <path d="M 8 12 Q 4 8 8 4 Q 12 0 18 4 Q 24 0 30 4 Q 34 8 30 12 Q 36 16 30 20 Q 24 24 18 20 Q 12 24 8 20 Q 2 16 8 12 Z" 
+              fill="url(#iconGradient)" opacity="0.8" class="glow-effect"/>
         
-        <!-- Professional code lines -->
-        <g class="fade-in delay-4">
-          <text x="2" y="12" style="font-size: 4px; font-family: monospace;" fill="#3b82f6">$ npm run build</text>
-          <text x="2" y="16" style="font-size: 4px; font-family: monospace;" fill="#10b981">✓ Build completed</text>
-          <text x="2" y="20" style="font-size: 4px; font-family: monospace;" fill="#64748b">🚀 Ready for production</text>
+        <!-- Deployment nodes -->
+        <circle cx="12" cy="11" r="1.5" fill="#ffffff" opacity="0.9" class="pulse delay-1"/>
+        <circle cx="18" cy="9" r="1.5" fill="#ffffff" opacity="0.9" class="pulse delay-3"/>
+        <circle cx="24" cy="11" r="1.5" fill="#ffffff" opacity="0.9" class="pulse delay-5"/>
+        
+        <!-- Deployment signals -->
+        <g class="shimmer delay-2">
+          <path d="M 18 20 L 18 16" stroke="#00f5ff" stroke-width="2" opacity="0.8"/>
+          <polygon points="17,17 18,16 19,17" fill="#00f5ff" opacity="0.8"/>
           
-          <!-- Professional typing cursor -->
-          <rect x="2" y="22" width="1" height="2" fill="#3b82f6" class="typing delay-5"/>
+          <!-- Deployment status -->
+          <text x="18" y="28" text-anchor="middle" style="font-size: 4px; font-weight: bold;" fill="#00f5ff">LIVE</text>
         </g>
+      </g>
+    </g>
+    
+    <!-- Central Integration Hub - The Infinity Engine -->
+    <g transform="translate(65, 125)">  
+      <!-- Counter-rotating inner infinity -->
+      <g class="rotate-reverse delay-2" transform-origin="0 0">
+        <path d="M -15 0 Q -15 -10 -6 -10 Q 6 -10 6 0 Q 6 10 15 10 Q 24 10 24 0 Q 24 -10 15 -10 Q 6 -10 6 0 Q 6 10 -6 10 Q -15 10 -15 0 Z" 
+              fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+      </g>
+      
+      <!-- Quantum particles flowing through infinity -->
+      <circle cx="0" cy="0" r="2.5" fill="#00f5ff" opacity="0.9" class="pulse delay-1">
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <path d="M -20 0 Q -20 -15 -8 -15 Q 8 -15 8 0 Q 8 15 20 15 Q 32 15 32 0 Q 32 -15 20 -15 Q 8 -15 8 0 Q 8 15 -8 15 Q -20 15 -20 0 Z"/>
+        </animateMotion>
+      </circle>
+      
+      <circle cx="0" cy="0" r="2" fill="#feca57" opacity="0.8" class="pulse delay-3">
+        <animateMotion dur="6s" repeatCount="indefinite" begin="2s">
+          <path d="M -20 0 Q -20 -15 -8 -15 Q 8 -15 8 0 Q 8 15 20 15 Q 32 15 32 0 Q 32 -15 20 -15 Q 8 -15 8 0 Q 8 15 -8 15 Q -20 15 -20 0 Z"/>
+        </animateMotion>
+      </circle>
+      
+      <circle cx="0" cy="0" r="1.8" fill="#ff6b6b" opacity="0.9" class="pulse delay-5">
+        <animateMotion dur="6s" repeatCount="indefinite" begin="4s">
+          <path d="M -20 0 Q -20 -15 -8 -15 Q 8 -15 8 0 Q 8 15 20 15 Q 32 15 32 0 Q 32 -15 20 -15 Q 8 -15 8 0 Q 8 15 -8 15 Q -20 15 -20 0 Z"/>
+        </animateMotion>
+      </circle>
+      
+      <!-- Central fusion core -->
+      <circle cx="0" cy="0" r="6" fill="url(#iconGradient)" opacity="0.9" class="scale-pulse delay-2" filter="url(#neonGlow)"/>
+      <text x="0" y="2" text-anchor="middle" style="font-size: 8px; font-weight: bold;" fill="white">AI</text>
+      
+      <!-- Energy rings -->
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4" class="pulse delay-1"/>
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#feca57" stroke-width="0.8" opacity="0.3" class="pulse delay-3"/>
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#ff6b6b" stroke-width="0.6" opacity="0.2" class="pulse delay-5"/>
+    </g>
+  </g>
+
+  <!-- Premium Main Content -->
+  <g transform="translate(280, 70)">
+    <!-- Ultra-premium name with holographic effect -->
+    <text x="0" y="15" class="main-name slide-in-left delay-2" fill="url(#nameGradient)" filter="url(#textGlow)">
+      Efrat Bdil
+    </text>
+    
+    <!-- Holographic brackets with gradient -->
+    <g class="slide-in-right delay-3">
+      <text x="0" y="45" class="code-text" fill="url(#codeGradient)" filter="url(#neonGlow)" opacity="0.95">
+        &lt; <tspan class="shimmer delay-1">Code</tspan> × <tspan class="shimmer delay-2">Intelligence</tspan> × <tspan class="shimmer delay-3">Innovation</tspan> /&gt;
+      </text>
+      
+      <!-- Animated cursor -->
+      <rect x="380" y="35" width="3" height="18" fill="#00f5ff" class="pulse delay-4" rx="1"/>
+    </g>
+
+    <!-- Premium subtitle with underline animation -->
+    <g class="slide-in-left delay-4">
+      <text x="0" y="75" class="subtitle" fill="#e2e8f0" filter="url(#textGlow)">
+        Full Stack Developer × AI Specialist
+      </text>
+      
+      <!-- Animated gradient underline -->
+      <line x1="0" y1="82" x2="0" y2="82" stroke="url(#accentGradient)" stroke-width="3" opacity="0.8" stroke-linecap="round">
+        <animate attributeName="x2" values="0;350;350" dur="2s" begin="1.8s" fill="freeze"/>
+      </line>
+    </g>
+
+    <!-- Premium description with link -->
+    <g class="fade-in delay-5">
+      <text x="0" y="110" class="description" fill="#cbd5e0">
+        Founder of 
+        <tspan fill="url(#nameGradient)" class="glow-effect" style="font-weight: 600;">"Creating AI"</tspan>
+        – Revolutionary Data Science Learning Platform
+      </text>
+      
+      <!-- Subtle glow effect under the brand name -->
+      <line x1="85" y1="115" x2="200" y2="115" stroke="#00f5ff" stroke-width="1" opacity="0.3" class="shimmer delay-6"/>
+    </g>
+
+    <!-- Premium interactive links section -->
+    <g class="fade-in delay-6" transform="translate(0, 50)">
+      
+      <!-- Website Link - Enhanced -->
+      <g class="link-hover" style="cursor: pointer;" transform="translate(0, 75)">
+        <!-- Glowing orb background -->
+        <circle cx="12" cy="12" r="10" fill="url(#iconGradient)" opacity="0.2" class="pulse delay-1"/>
         
-        <!-- Professional performance metrics -->
-        <!-- <g transform="translate(32, 8)" class="pulse delay-3">
-          <rect x="0" y="0" width="10" height="6" fill="#1e293b" rx="1" opacity="0.8"/>
-          <text x="5" y="4" text-anchor="middle" style="font-size: 3px;" fill="#10b981">98%</text>
-          <rect x="1" y="7" width="8" height="1" fill="#3b82f6" opacity="0.3"/>
-          <rect x="1" y="7" width="7.8" height="1" fill="#10b981" opacity="0.8"/> -->
+        <!-- Premium globe icon -->
+        <circle cx="12" cy="12" r="7" fill="none" stroke="#00f5ff" stroke-width="2" opacity="0.9" class="glow-effect"/>
+        <path d="M 5 12 Q 12 6 19 12" stroke="#00f5ff" stroke-width="1.5" fill="none" opacity="0.8"/>
+        <path d="M 5 12 Q 12 18 19 12" stroke="#00f5ff" stroke-width="1.5" fill="none" opacity="0.8"/>
+        <line x1="12" y1="5" x2="12" y2="19" stroke="#00f5ff" stroke-width="1.5" opacity="0.8"/>
+        
+        <!-- Connection dots -->
+        <circle cx="8" cy="9" r="1" fill="#00f5ff" opacity="0.7" class="pulse delay-2"/>
+        <circle cx="16" cy="15" r="1" fill="#00f5ff" opacity="0.7" class="pulse delay-4"/>
+        
+        <text x="28" y="17" class="link-text" fill="#00f5ff" filter="url(#textGlow)">
+          Portfolio Website
+        </text>
+      </g>
+
+      <!-- Blog Link - Enhanced -->
+      <g class="link-hover" style="cursor: pointer;" transform="translate(200, 75)">
+        <!-- Glowing orb background -->
+        <circle cx="12" cy="12" r="10" fill="url(#accentGradient)" opacity="0.2" class="pulse delay-2"/>
+        
+        <!-- Premium blog icon -->
+        <rect x="6" y="7" width="12" height="10" rx="2" fill="none" stroke="#feca57" stroke-width="2" opacity="0.9" class="glow-effect"/>
+        <line x1="8" y1="10" x2="16" y2="10" stroke="#feca57" stroke-width="1.5" opacity="0.8"/>
+        <line x1="8" y1="12" x2="16" y2="12" stroke="#feca57" stroke-width="1.5" opacity="0.8"/>
+        <line x1="8" y1="14" x2="14" y2="14" stroke="#feca57" stroke-width="1.5" opacity="0.8"/>
+        
+        <!-- Floating particles -->
+        <circle cx="10" cy="5" r="0.8" fill="#feca57" opacity="0.6" class="float delay-1"/>
+        <circle cx="14" cy="19" r="0.6" fill="#feca57" opacity="0.5" class="float delay-3"/>
+        
+        <text x="28" y="17" class="link-text" fill="#feca57" filter="url(#textGlow)">
+          Tech Blog
+        </text>
+      </g>
+
+      <!-- GitHub Link - Enhanced -->
+      <g class="link-hover" style="cursor: pointer;" transform="translate(350, 75)">
+        <!-- Glowing orb background -->
+        <circle cx="12" cy="12" r="10" fill="#6c5ce7" opacity="0.3" class="pulse delay-3"/>
+        
+        <!-- Premium GitHub icon -->
+        <circle cx="12" cy="12" r="7" fill="#1a1a2e" opacity="0.9" stroke="#ffffff" stroke-width="1"/>
+        <path d="M8 14 C8 15.5, 13 15.5, 13 14 C13 12.5, 12 12.5, 12 11 C12 9.5, 13 9.5, 13 8 C13 6, 11 6.5, 10 8 C9 6.5, 7 6, 7 8 C7 9.5, 8 9.5, 8 11 C8 12.5, 7 12.5, 7 14 Z" 
+              fill="#ffffff" opacity="0.9"/>
+        
+        <!-- Code activity indicators -->
+        <rect x="4" y="4" width="2" height="1" fill="#00f5ff" opacity="0.7" class="pulse delay-1"/>
+        <rect x="18" y="6" width="1.5" height="1" fill="#feca57" opacity="0.6" class="pulse delay-2"/>
+        <rect x="6" y="20" width="1" height="1" fill="#ff6b6b" opacity="0.5" class="pulse delay-3"/>
+        
+        <text x="28" y="17" class="link-text" fill="#ffffff" filter="url(#textGlow)">
+          GitHub Profile
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Premium decorative elements -->
+  <g opacity="0.15" class="fade-in delay-8">
+    <!-- Floating code symbols -->
+    <text x="680" y="80" style="font-size: 24px; font-family: monospace;" fill="#00f5ff" class="float delay-1" opacity="0.4">{}</text>
+    <text x="720" y="220" style="font-size: 18px; font-family: monospace;" fill="#feca57" class="float delay-2" opacity="0.3">&lt;/&gt;</text>
+    <text x="50" y="280" style="font-size: 20px; font-family: monospace;" fill="#ff6b6b" class="float delay-3" opacity="0.3">[]</text>
+    
+    <!-- Geometric accent lines -->
+    <line x1="0" y1="150" x2="50" y2="150" stroke="url(#accentGradient)" stroke-width="2" opacity="0.4" class="shimmer delay-4"/>
+    <line x1="720" y1="100" x2="800" y2="100" stroke="url(#nameGradient)" stroke-width="2" opacity="0.4" class="shimmer delay-5"/>
+    
+    <!-- Corner accents -->
+    <path d="M 0 0 L 30 0 L 30 2 L 2 2 L 2 30 L 0 30 Z" fill="#00f5ff" opacity="0.3"/>
+    <path d="M 800 300 L 770 300 L 770 298 L 798 298 L 798 270 L 800 270 Z" fill="#ff6b6b" opacity="0.3"/>
+  </g>
+
+  <!-- Quantum field background animation -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="1" fill="#00f5ff" class="pulse delay-1">
+      <animate attributeName="r" values="1;3;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="200" r="1" fill="#feca57" class="pulse delay-3">
+      <animate attributeName="r" values="1;2.5;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="80" r="1" fill="#ff6b6b" class="pulse delay-5">
+      <animate attributeName="r" values="1;2;1" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="180" r="1" fill="#6c5ce7" class="pulse delay-2">
+      <animate attributeName="r" values="1;2.8;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+</svg>
