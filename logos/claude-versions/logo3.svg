@@ -1,0 +1,176 @@
+<svg width="600" height="160" viewBox="0 0 600 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Colorful gradients -->
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .fade-in.delay-1 { animation-delay: 0.4s; }
+    .fade-in.delay-2 { animation-delay: 0.8s; }
+    .fade-in.delay-3 { animation-delay: 1.2s; }
+    .fade-in.delay-4 { animation-delay: 1.6s; }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      fill: url(#nameGradient);
+    }
+
+    .code-accent {
+      font-size: 18px;
+      font-weight: 600;
+      fill: url(#codeGradient);
+    }
+
+    .subtitle {
+      font-size: 16px;
+      fill: #444;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 14px;
+      fill: #555;
+    }
+
+    text {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+
+  <rect width="600" height="160" fill="white" />
+
+  <!-- Decorative background elements -->
+  <circle cx="550" cy="30" r="3" fill="url(#accentGradient)" opacity="0.3" class="float delay-1" />
+  <circle cx="570" cy="50" r="2" fill="url(#aiGradient)" opacity="0.4" class="pulse" />
+  <rect x="520" y="120" width="6" height="6" fill="url(#codeGradient)" opacity="0.3" transform="rotate(45 523 123)" class="float delay-3" />
+
+  <!-- Code brackets icon -->
+  <g class="fade-in delay-1 float">
+    <path d="M 10 35 Q 5 40 10 45 Q 5 50 10 55" stroke="url(#codeGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 18 35 Q 23 40 18 45 Q 23 50 18 55" stroke="url(#codeGradient)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Main name -->
+  <text x="35" y="50" class="fade-in delay-1 name">Efrat Bdil</text>
+
+  <!-- Code with Intelligence with neural network icon -->
+  <g class="fade-in delay-2">
+    <text x="180" y="50" class="code-accent">Code with Intelligence</text>
+    
+    <!-- Neural network/AI brain icon -->
+    <g transform="translate(400, 35)" class="pulse">
+      <!-- Central node -->
+      <circle cx="0" cy="0" r="3" fill="url(#aiGradient)" />
+      
+      <!-- Connected nodes -->
+      <circle cx="-12" cy="-8" r="2" fill="url(#accentGradient)" />
+      <circle cx="12" cy="-8" r="2" fill="url(#accentGradient)" />
+      <circle cx="-12" cy="8" r="2" fill="url(#accentGradient)" />
+      <circle cx="12" cy="8" r="2" fill="url(#accentGradient)" />
+      
+      <!-- Connections -->
+      <line x1="-12" y1="-8" x2="0" y2="0" stroke="url(#aiGradient)" stroke-width="1" opacity="0.6" />
+      <line x1="12" y1="-8" x2="0" y2="0" stroke="url(#aiGradient)" stroke-width="1" opacity="0.6" />
+      <line x1="-12" y1="8" x2="0" y2="0" stroke="url(#aiGradient)" stroke-width="1" opacity="0.6" />
+      <line x1="12" y1="8" x2="0" y2="0" stroke="url(#aiGradient)" stroke-width="1" opacity="0.6" />
+      
+      <!-- Cross connections -->
+      <line x1="-12" y1="-8" x2="12" y2="8" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.4" />
+      <line x1="12" y1="-8" x2="-12" y2="8" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.4" />
+    </g>
+  </g>
+
+  <!-- Colorful underline -->
+  <line x1="35" y1="60" x2="450" y2="60" stroke="url(#accentGradient)" stroke-width="2" opacity="0.7" class="fade-in delay-2" />
+
+  <!-- Full Stack & AI Developer with tech icons -->
+  <g class="fade-in delay-2">
+    <text x="35" y="80" class="subtitle">Full Stack &amp; AI Developer</text>
+    
+    <!-- Tech stack visual indicators -->
+    <g transform="translate(280, 70)">
+      <!-- React-like icon -->
+      <circle cx="0" cy="0" r="8" fill="none" stroke="url(#aiGradient)" stroke-width="1.5" opacity="0.6" />
+      <circle cx="0" cy="0" r="2" fill="url(#aiGradient)" />
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="none" stroke="url(#aiGradient)" stroke-width="1" opacity="0.4" transform="rotate(60)" />
+      <ellipse cx="0" cy="0" rx="12" ry="4" fill="none" stroke="url(#aiGradient)" stroke-width="1" opacity="0.4" transform="rotate(-60)" />
+    </g>
+    
+    <!-- Python-like icon -->
+    <g transform="translate(320, 70)">
+      <rect x="-6" y="-6" width="12" height="12" rx="3" fill="url(#codeGradient)" opacity="0.6" />
+      <circle cx="0" cy="0" r="2" fill="white" />
+    </g>
+    
+    <!-- AI chip icon -->
+    <g transform="translate(360, 70)">
+      <rect x="-6" y="-6" width="12" height="12" rx="1" fill="none" stroke="url(#nameGradient)" stroke-width="1.5" />
+      <rect x="-3" y="-3" width="6" height="6" rx="1" fill="url(#nameGradient)" opacity="0.7" />
+      <circle cx="0" cy="0" r="1" fill="white" />
+    </g>
+  </g>
+
+  <!-- Description -->
+  <text x="35" y="105" class="fade-in delay-3 desc">Founder of "Creating AI" – Data Science Learning Platform</text>
+
+  <!-- Side accent elements -->
+  <g class="fade-in delay-4">
+    <rect x="590" y="20" width="3" height="30" rx="1.5" fill="url(#codeGradient)" opacity="0.6" />
+    <rect x="590" y="60" width="3" height="20" rx="1.5" fill="url(#aiGradient)" opacity="0.6" />
+    <rect x="590" y="90" width="3" height="25" rx="1.5" fill="url(#accentGradient)" opacity="0.6" />
+  </g>
+
+</svg>
