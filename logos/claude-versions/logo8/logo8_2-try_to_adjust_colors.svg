@@ -1,0 +1,513 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Professional gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="spotlightGradient" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+      <stop offset="40%" style="stop-color:#1e40af;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.05" />
+    </radialGradient>
+    
+    <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#94a3b8;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#64748b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1d4ed8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Professional shadow and glow effects -->
+    <filter id="premiumShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#3b82f6" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="bigBlur"/>
+      <feMerge> 
+        <feMergeNode in="bigBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Professional animated patterns -->
+    <pattern id="techPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none"/>
+      <circle cx="20" cy="20" r="1" fill="#3b82f6" opacity="0.2">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="5" cy="5" r="0.5" fill="#10b981" opacity="0.15">
+        <animate attributeName="opacity" values="0.05;0.25;0.05" dur="3s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="35" cy="35" r="0.8" fill="#64748b" opacity="0.2">
+        <animate attributeName="opacity" values="0.1;0.3;0.1" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+    </pattern>
+  </defs>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    .slide-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    .pulse {
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    
+    .pulse-fast {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .float-reverse {
+      animation: floatReverse 5s ease-in-out infinite;
+    }
+    
+    .rotate {
+      animation: rotate 12s linear infinite;
+    }
+    
+    .rotate-reverse {
+      animation: rotateReverse 15s linear infinite;
+    }
+    
+    .scale-pulse {
+      animation: scalePulse 4s ease-in-out infinite;
+    }
+    
+    .shimmer {
+      animation: shimmer 3s linear infinite;
+    }
+    
+    .typing {
+      animation: typing 4s steps(20) infinite;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1.0s; }
+    .delay-6 { animation-delay: 1.2s; }
+    .delay-7 { animation-delay: 1.4s; }
+    .delay-8 { animation-delay: 1.6s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideInLeft {
+      to { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      to { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInUp {
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(6px) rotate(-1.5deg); }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes rotateReverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    
+    @keyframes scalePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes shimmer {
+      0% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+      100% { opacity: 0.4; }
+    }
+    
+    @keyframes typing {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .main-name {
+      font-size: 42px;
+      font-weight: 700;
+      font-family: 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      font-family: 'SF Pro Display', 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .description {
+      font-size: 16px;
+      font-weight: 400;
+      font-family: 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 0.3px;
+    }
+    
+    .link-text {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
+      letter-spacing: 0.2px;
+    }
+    
+    .code-text {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      letter-spacing: 0.3px;
+    }
+
+    .link-hover:hover {
+      opacity: 0.85;
+      transform: translateY(-1px) scale(1.02);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .subtle-glow {
+      filter: drop-shadow(0 0 6px currentColor);
+    }
+  </style>
+
+  <!-- Professional background with layers -->
+  <rect width="800" height="300" fill="url(#bgGradient)" />
+  <rect width="800" height="300" fill="url(#spotlightGradient)" />
+  <rect width="800" height="300" fill="url(#techPattern)" opacity="0.08" />
+  
+  <!-- Subtle background elements -->
+  <g opacity="0.25">
+    <!-- Professional geometric shapes -->
+    <g class="float delay-1">
+      <polygon points="150,40 160,35 170,40 165,50" fill="#3b82f6" opacity="0.2" />
+    </g>
+    <g class="float-reverse delay-2">
+      <circle cx="650" cy="70" r="8" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.25" />
+    </g>
+    <g class="float delay-3">
+      <rect x="100" y="220" width="12" height="12" fill="#64748b" opacity="0.2" transform="rotate(45 106 226)" />
+    </g>
+    <g class="float-reverse delay-4">
+      <path d="M 700 200 L 710 205 L 700 210 L 690 205 Z" fill="#475569" opacity="0.25" />
+    </g>
+    
+    <!-- Professional particles -->
+    <circle cx="200" cy="50" r="1.5" fill="#3b82f6" class="pulse delay-1" opacity="0.4" />
+    <circle cx="600" cy="250" r="1" fill="#10b981" class="pulse delay-3" opacity="0.35" />
+    <circle cx="750" cy="120" r="2" fill="#64748b" class="pulse delay-2" opacity="0.4" />
+    <circle cx="50" cy="180" r="1" fill="#475569" class="pulse delay-4" opacity="0.3" />
+    <circle cx="400" cy="280" r="1.5" fill="#3b82f6" class="pulse delay-5" opacity="0.4" />
+  </g>
+  
+  <!-- Professional AI + Full Stack Icon -->
+  <g class="fade-in delay-1" transform="translate(20, 30) scale(1.8)" filter="url(#iconGlow)">
+    
+    <!-- Central professional brain -->
+    <g transform="translate(50, 60)">
+      <!-- Professional brain shell -->
+      <path d="M -25 -18 Q -30 -30 -18 -35 Q 0 -40 18 -35 Q 30 -30 25 -18 Q 32 -8 28 8 Q 25 20 12 24 Q 0 26 -12 24 Q -25 20 -28 8 Q -32 -8 -25 -18 Z" 
+            fill="none" stroke="url(#iconGradient)" stroke-width="2.5" opacity="0.8" class="pulse delay-1"/>
+      
+      <!-- Professional neural network -->
+      <g class="scale-pulse delay-2">
+        <circle cx="-12" cy="-12" r="2.5" fill="#3b82f6" opacity="0.8" class="pulse delay-1"/>
+        <circle cx="12" cy="-12" r="2.5" fill="#10b981" opacity="0.8" class="pulse delay-3"/>
+        <circle cx="0" cy="0" r="3.5" fill="#60a5fa" opacity="0.9" class="pulse delay-2"/>
+        <circle cx="-15" cy="12" r="2" fill="#475569" opacity="0.7" class="pulse delay-4"/>
+        <circle cx="15" cy="12" r="2" fill="#64748b" opacity="0.7" class="pulse delay-5"/>
+        <circle cx="-8" cy="6" r="1.5" fill="#3b82f6" opacity="0.6" class="pulse delay-6"/>
+        <circle cx="8" cy="6" r="1.5" fill="#10b981" opacity="0.6" class="pulse delay-1"/>
+      </g>
+      
+      <!-- Professional neural connections -->
+      <g class="shimmer delay-1">
+        <path d="M -12 -12 L 0 0 L 12 -12" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+        <path d="M 0 0 L -15 12" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 0 0 L 15 12" stroke="#60a5fa" stroke-width="1.5" opacity="0.7"/>
+        <path d="M -12 -12 L -8 6" stroke="#475569" stroke-width="1" opacity="0.5"/>
+        <path d="M 12 -12 L 8 6" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+        <path d="M -8 6 L 8 6" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+      </g>
+      
+      <!-- Professional data streams -->
+      <g class="rotate delay-2" transform-origin="0 0">
+        <circle cx="0" cy="0" r="20" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.25"/>
+        <circle cx="0" cy="0" r="25" fill="none" stroke="#10b981" stroke-width="0.6" opacity="0.15"/>
+        <!-- Data points on orbits -->
+        <circle cx="20" cy="0" r="1.2" fill="#3b82f6" opacity="0.7" class="pulse delay-1"/>
+        <circle cx="-20" cy="0" r="1" fill="#10b981" opacity="0.6" class="pulse delay-3"/>
+        <circle cx="0" cy="25" r="0.8" fill="#60a5fa" opacity="0.5" class="pulse delay-2"/>
+        <circle cx="0" cy="-25" r="1" fill="#475569" opacity="0.6" class="pulse delay-4"/>
+      </g>
+    </g>
+    
+    <!-- Left: Professional Data Science Visualization -->
+    <g transform="translate(0, 30)">
+      <!-- Professional Data Visualization -->
+      <g class="float delay-1">
+        <!-- Data cube with professional styling -->
+        <g transform="translate(15, 40)">
+          <!-- Front face -->
+          <rect x="0" y="0" width="20" height="20" fill="#3b82f6" opacity="0.6" rx="2"/>
+          <!-- Top face -->
+          <path d="M 0 0 L 5 -5 L 25 -5 L 20 0 Z" fill="#10b981" opacity="0.7"/>
+          <!-- Right face -->
+          <path d="M 20 0 L 25 -5 L 25 15 L 20 20 Z" fill="#60a5fa" opacity="0.5"/>
+          
+          <!-- Professional data visualization inside -->
+          <g class="pulse delay-2">
+            <circle cx="5" cy="5" r="1.2" fill="#ffffff" opacity="0.8"/>
+            <circle cx="15" cy="8" r="1" fill="#ffffff" opacity="0.7"/>
+            <circle cx="8" cy="15" r="1.5" fill="#ffffff" opacity="0.8"/>
+            <circle cx="15" cy="15" r="0.8" fill="#ffffff" opacity="0.6"/>
+          </g>
+          
+          <!-- Professional connecting lines -->
+          <path d="M 5 5 L 15 8 L 8 15 L 15 15" stroke="#ffffff" stroke-width="0.8" opacity="0.5" fill="none"/>
+        </g>
+        
+        <!-- Professional Machine Learning Visualization -->
+        <g transform="translate(10, 80)">
+          <!-- Professional neural network layers -->
+          <g class="shimmer delay-3">
+            <!-- Input layer -->
+            <circle cx="0" cy="0" r="1.8" fill="#3b82f6" opacity="0.8"/>
+            <circle cx="0" cy="8" r="1.8" fill="#3b82f6" opacity="0.8"/>
+            <circle cx="0" cy="16" r="1.8" fill="#3b82f6" opacity="0.8"/>
+            
+            <!-- Hidden layer -->
+            <circle cx="15" cy="2" r="2" fill="#10b981" opacity="0.8"/>
+            <circle cx="15" cy="10" r="2" fill="#10b981" opacity="0.8"/>
+            <circle cx="15" cy="18" r="2" fill="#10b981" opacity="0.8"/>
+            
+            <!-- Output layer -->
+            <circle cx="30" cy="8" r="2.5" fill="#60a5fa" opacity="0.8"/>
+            
+            <!-- Professional connections -->
+            <g stroke="#e2e8f0" stroke-width="0.8" opacity="0.5" fill="none">
+              <path d="M 2 0 L 13 2"/>
+              <path d="M 2 0 L 13 10"/>
+              <path d="M 2 0 L 13 18"/>
+              <path d="M 2 8 L 13 2"/>
+              <path d="M 2 8 L 13 10"/>
+              <path d="M 2 8 L 13 18"/>
+              <path d="M 2 16 L 13 2"/>
+              <path d="M 2 16 L 13 10"/>
+              <path d="M 2 16 L 13 18"/>
+              <path d="M 17 2 L 27 8"/>
+              <path d="M 17 10 L 27 8"/>
+              <path d="M 17 18 L 27 8"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      
+      <!-- Professional Analytics Waves -->
+      <g transform="translate(0, 130)">
+        <g class="shimmer delay-4">
+          <path d="M 5 0 Q 15 -6 25 0 Q 35 6 45 0 Q 55 -6 65 0" 
+                stroke="url(#iconGradient)" stroke-width="2.5" fill="none" opacity="0.7" class="float delay-1"/>
+          <path d="M 5 10 Q 15 4 25 10 Q 35 16 45 10 Q 55 4 65 10" 
+                stroke="url(#techGradient)" stroke-width="2" fill="none" opacity="0.6" class="float delay-2"/>
+          <path d="M 5 20 Q 15 14 25 20 Q 35 26 45 20 Q 55 14 65 20" 
+                stroke="#64748b" stroke-width="1.5" fill="none" opacity="0.5" class="float delay-3"/>
+        </g>
+      </g>
+      
+    </g>
+    
+    <!-- Right: Professional Full Stack Development -->
+    <g transform="translate(95, 30)">
+      <!-- Professional App Architecture -->
+      <g class="slide-in-up delay-1">
+        <!-- Frontend Layer -->
+        <g transform="translate(0, 40)">
+          <rect x="0" y="0" width="35" height="10" rx="5" fill="url(#accentGradient)" opacity="0.8" class="subtle-glow"/>
+          <text x="17.5" y="7" text-anchor="middle" style="font-size: 6px; font-weight: 600;" fill="white">FRONTEND</text>
+          <!-- Professional UI Elements -->
+          <g class="pulse delay-1">
+            <rect x="5" y="15" width="8" height="3" rx="1" fill="#3b82f6" opacity="0.6"/>
+            <rect x="15" y="15" width="5" height="3" rx="1" fill="#10b981" opacity="0.6"/>
+            <rect x="22" y="15" width="8" height="3" rx="1" fill="#60a5fa" opacity="0.6"/>
+          </g>
+        </g>
+        
+        <!-- API Layer -->
+        <g transform="translate(3, 70)">
+          <rect x="0" y="0" width="29" height="8" rx="4" fill="url(#techGradient)" opacity="0.7" class="subtle-glow"/>
+          <text x="14.5" y="6" text-anchor="middle" style="font-size: 6px; font-weight: 600;" fill="white">API GATEWAY</text>
+          <!-- Professional API Endpoints -->
+          <g class="shimmer delay-2">
+            <circle cx="7" cy="12" r="1.2" fill="#3b82f6" opacity="0.7"/>
+            <circle cx="14.5" cy="12" r="1.2" fill="#10b981" opacity="0.7"/>
+            <circle cx="22" cy="12" r="1.2" fill="#60a5fa" opacity="0.7"/>
+          </g>
+        </g>
+        
+        <!-- Database Layer -->
+        <g transform="translate(8, 95)">
+          <rect x="0" y="0" width="19" height="7" rx="3" fill="url(#iconGradient)" opacity="0.6" class="subtle-glow"/>
+          <text x="9.5" y="5" text-anchor="middle" style="font-size: 5px; font-weight: 600;" fill="white">DATABASE</text>
+          <!-- Professional Data Tables -->
+          <g class="pulse delay-3">
+            <rect x="3" y="10" width="4" height="2" fill="#3b82f6" opacity="0.5"/>
+            <rect x="8" y="10" width="3" height="2" fill="#10b981" opacity="0.5"/>
+            <rect x="12" y="10" width="4" height="2" fill="#60a5fa" opacity="0.5"/>
+          </g>
+        </g>
+        
+        <!-- Professional Data Flow -->
+        <g class="shimmer delay-1">
+          <path d="M 17.5 50 L 17.5 70" stroke="#3b82f6" stroke-width="2.5" opacity="0.7"/>
+          <path d="M 17.5 78 L 17.5 95" stroke="#10b981" stroke-width="2.5" opacity="0.7"/>
+          
+          <!-- Professional flow indicators -->
+          <circle cx="17.5" cy="60" r="1.5" fill="#3b82f6" opacity="0.8" class="pulse delay-1">
+            <animateMotion dur="2.5s" repeatCount="indefinite">
+              <path d="M 0 -10 L 0 10"/>
+            </animateMotion>
+          </circle>
+          <circle cx="17.5" cy="87" r="1.5" fill="#10b981" opacity="0.8" class="pulse delay-2">
+            <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.5s">
+              <path d="M 0 -9 L 0 9"/>
+            </animateMotion>
+          </circle>
+        </g>
+      </g>
+      
+      <!-- Professional Development Environment -->
+      <g transform="translate(-5, 130)">
+        <!-- Professional Terminal -->
+        <rect x="0" y="0" width="45" height="25" rx="3" fill="#0f172a" opacity="0.95" stroke="#3b82f6" stroke-width="0.8"/>
+        
+        <!-- Professional terminal header -->
+        <circle cx="4" cy="4" r="1.2" fill="#ef4444" opacity="0.8"/>
+        <circle cx="8" cy="4" r="1.2" fill="#f59e0b" opacity="0.8"/>
+        <circle cx="12" cy="4" r="1.2" fill="#10b981" opacity="0.8"/>
+        
+        <!-- Professional code lines -->
+        <g class="fade-in delay-4">
+          <text x="2" y="12" style="font-size: 4px; font-family: monospace;" fill="#3b82f6">$ npm run build</text>
+          <text x="2" y="16" style="font-size: 4px; font-family: monospace;" fill="#10b981">✓ Build completed</text>
+          <text x="2" y="20" style="font-size: 4px; font-family: monospace;" fill="#64748b">🚀 Ready for production</text>
+          
+          <!-- Professional typing cursor -->
+          <rect x="2" y="22" width="1" height="2" fill="#3b82f6" class="typing delay-5"/>
+        </g>
+        
+        <!-- Professional performance metrics -->
+        <!-- <g transform="translate(32, 8)" class="pulse delay-3">
+          <rect x="0" y="0" width="10" height="6" fill="#1e293b" rx="1" opacity="0.8"/>
+          <text x="5" y="4" text-anchor="middle" style="font-size: 3px;" fill="#10b981">98%</text>
+          <rect x="1" y="7" width="8" height="1" fill="#3b82f6" opacity="0.3"/>
+          <rect x="1" y="7" width="7.8" height="1" fill="#10b981" opacity="0.8"/> -->
